@@ -22,13 +22,148 @@
      -->
 
 
-
+<!-- 
 
      <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Login</title>
       <link rel="stylesheet" href="login.css"><!-- Separate CSS for login -->
+<!-- </head>
+<body>
+
+    <div class="login-container">
+        <form class="login-box" th:action="@{/login}" method="post">
+            <h2>Login</h2>
+            <div class="input-group">
+                <label for="rollNumber">Roll Number</label>
+                <input type="text" id="rollNumber" name="rollNumber" placeholder="Enter your roll number" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+            <p class="signup-link">Forgot your password? <a href="#">Reset</a></p>
+        </form>
+    </div>
+
+</body>
+</html> --> 
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+        }
+
+        .login-container {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background: url("https://www.targetadmission.com/img/colleges/newc/8238-540527.jpg") no-repeat center center/cover;
+          background-attachment: fixed;
+          overflow: hidden;
+        }
+
+        .login-container::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          backdrop-filter: blur(6px);
+          background-color: rgba(0, 0, 0, 0.3);
+          z-index: 1;
+        }
+
+        .login-box {
+          position: relative;
+          z-index: 2;
+          background: rgba(255, 255, 255, 0.15);
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          backdrop-filter: blur(10px);
+          padding: 30px;
+          width: 100%;
+          max-width: 400px;
+          border-radius: 12px;
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+          text-align: center;
+          color: #fff;
+        }
+
+        .login-box h2 {
+          margin-bottom: 20px;
+          color: #fff;
+        }
+
+        .input-group {
+          position: relative;
+          margin: 10px 0;
+          text-align: left;
+        }
+
+        .input-group label {
+          display: block;
+          margin-bottom: 6px;
+          font-size: 14px;
+        }
+
+        .login-box input {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 6px;
+          font-size: 14px;
+          margin-bottom: 10px;
+          box-sizing: border-box;
+        }
+
+        .login-btn {
+          width: 100%;
+          padding: 12px;
+          background-color: #007bff;
+          border: none;
+          color: white;
+          font-size: 16px;
+          font-weight: bold;
+          border-radius: 6px;
+          cursor: pointer;
+          margin-top: 10px;
+          transition: background 0.3s ease;
+        }
+
+        .login-btn:hover {
+          background-color: #0056b3;
+        }
+
+        .signup-link {
+          margin-top: 15px;
+          font-size: 14px;
+        }
+
+        .signup-link a {
+          color: #fff;
+          text-decoration: underline;
+        }
+
+        @media (max-width: 500px) {
+          .login-box {
+            padding: 20px;
+          }
+        }
+    </style>
 </head>
 <body>
 
@@ -50,3 +185,5 @@
 
 </body>
 </html>
+
+
