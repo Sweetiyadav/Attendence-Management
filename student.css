@@ -9,7 +9,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background: linear-gradient(135deg, #6a11cb, ##21f135ff);
     color: white;
     display: flex;
     flex-direction: column;
