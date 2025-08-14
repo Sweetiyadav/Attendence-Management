@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Admin Panel</title>
@@ -11,4 +11,77 @@
         <li><a href="/admin/reports">View Reports</a></li>
     </ul>
 </body>
+</html> -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Panel</title>
+    <!-- <link rel="stylesheet" href="/css/admin.css"> -->
+     <style>
+        /* Reset basic styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    margin: 0;
+    font-size: 28px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation list */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 40px auto;
+    max-width: 400px;
+}
+
+ul li {
+    margin: 15px 0;
+}
+
+/* Links as buttons */
+ul li a {
+    display: block;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+ul li a:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+    ul {
+        width: 90%;
+    }
+}
+
+        </style>
+</head>
+<body>
+    <h1>Welcome, Admin</h1>
+    <ul>
+        <li><a href="/admin/manage-users">Manage Users</a></li>
+        <li><a href="/admin/reports">View Reports</a></li>
+    </ul>
+</body>
 </html>
+
+
