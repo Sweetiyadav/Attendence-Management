@@ -80,4 +80,17 @@ header {
     background-color: ##bcf4f7ff;
     padding: 20px;
 }
+/* Time on top right without box */
+#time {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: black;
+}
+header {
+    position: relative;
+}
+
 
