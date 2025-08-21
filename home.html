@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,56 +7,172 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <img src="logo.jpeg" alt="RCEW Logo" class="logo">
-        <div class="college-info">
-            <h1>RAJASTHAN COLLEGE OF ENGINEERING FOR WOMEN</h1>
-            <p>A Leading Exclusively Girls Engineering College in Jaipur, Rajasthan<br>
-               Approved by AICTE | Affiliated to RTU, Kota
-            </p>
-            <span class="estd">ESTD. 2002</span>
-        </div>
-         <div id="time"></div>
-    </header>
-
-    <!-- Main container -->
-    <div class="container">
-        <!-- Sidebar -->
-        <nav class="sidebar">
-            <a href="#">RCEW</a>
-            <a href="#">Account</a>
-            <a href="#">Mark Attendance</a>
-            <a href="#">View Attendance</a>
-            <a href="#">Subjects</a>
-            <a href="#">Labs</a>
-            <a href="#">Complaint Box</a>
-            <a href="#">About Us</a>
-        </nav>
-
-        <!-- Main content -->
-        <main class="content">
-            <h2>Welcome to the Student Panel</h2>
-            <p>Content will appear here...</p>
-        </main>
+   <header>
+    <img src="logo.jpeg" alt="RCEW Logo" class="logo">
+    <div class="college-info">
+      <h1>RAJASTHAN COLLEGE OF ENGINEERING FOR WOMEN</h1>
+      <p>A Leading Exclusively Girls Engineering College in Jaipur, Rajasthan<br>
+        Approved by AICTE | Affiliated to RTU, Kota
+      </p>
+      <span class="estd">ESTD. 2002</span>
     </div>
-      <script>
-        function updateTime() {
-            const now = new Date();
-            const options = { 
-                hour: '2-digit', 
-                minute: '2-digit', 
-                second: '2-digit', 
-                hour12: true 
-            };
-            document.getElementById("time").textContent = now.toLocaleTimeString('en-US', options);
+  </header>
+
+  <div class="container">
+  
+    <nav class="sidebar">
+      <a href="#">RCEW</a>
+      <a href="#">Account</a>
+      <a href="#">View Attendance</a>
+
+   
+      <div class="dropdown">
+        <a href="#">Subjects ▾</a>
+        <div class="dropdown-content">
+          <a href="#">Compiler Design</a>
+          <a href="#">Operating System</a>
+          <a href="#">Analysis of Algorithm</a>
+          <a href="#">Adv. Java</a>
+        </div>
+      </div>
+
+     
+      <div class="dropdown">
+        <a href="#">Labs ▾</a>
+        <div class="dropdown-content">
+          <a href="#">CGM LAB</a>
+          <a href="#">ADV. JAVA LAB</a>
+          <a href="#">CD LAB</a>
+          <a href="#">AI Lab</a>
+        </div>
+      </div>
+
+      <a href="#">Complaint Box</a>
+      <a href="#">About Us</a>
+    </nav>
+
+   
+    <main class="content">
+      <h2>Welcome to the Student Panel</h2>
+      <p>Content will appear here...</p>
+    </main>
+  </div>
+</body>
+</html>  -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Attendance System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+    <img src="logo.jpeg" alt="RCEW Logo" class="logo">
+    <div class="college-info">
+      <h1>RAJASTHAN COLLEGE OF ENGINEERING FOR WOMEN</h1>
+      <p>A Leading Exclusively Girls Engineering College in Jaipur, Rajasthan<br>
+        Approved by AICTE | Affiliated to RTU, Kota
+      </p>
+      <span class="estd">ESTD. 2002</span>
+    </div>
+  </header>
+
+  <!-- Main container -->
+  <div class="container">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <a href="#">RCEW</a>
+      <a href="#">Account</a>
+      <a href="#">View Attendance</a>
+
+      <!-- Subjects dropdown -->
+<div class="dropdown">
+  <button class="dropbtn">Subjects ▾</button>
+  <div class="dropdown-content">
+    <a href="compiler.html" target="_blank">Compiler Design</a>
+    <a href="os.html" target="_blank">Operating System</a>
+    <a href="aao.html" target="_blank">Analysis of Algorithm</a>
+    <a href="java.html" target="_blank">Adv. Java</a>
+  </div>
+</div>
+
+<!-- Labs dropdown -->
+<div class="dropdown">
+  <button class="dropbtn">Labs ▾</button>
+  <div class="dropdown-content">
+    <a href="cgm.html" target="_blank">CGM LAB</a>
+    <a href="javaLab.html" target="_blank">ADV. JAVA LAB</a>
+    <a href="cdLab.html" target="_blank">CD LAB</a>
+    <a href="aiLab.html" target="_blank">AI Lab</a>
+  </div>
+</div>
+
+
+      <!-- Complaint Box link -->
+      <a href="#" onclick="showComplaintBox()">Complaint Box</a>
+      <a href="#">About Us</a>
+    </nav>
+
+    <!-- Main content -->
+    <main class="content">
+      <h2>Welcome to the Student Panel</h2>
+      <p>Content will appear here...</p>
+
+      <!-- Complaint section -->
+      <div id="complaint-section">
+        <h3>Submit Your Complaint</h3>
+        <textarea id="complaintText" placeholder="Write your complaint here..."></textarea>
+        <br>
+        <button onclick="submitComplaint()">Submit</button>
+        <p class="message" id="responseMsg">
+          ✅"Thank you! Your complaint has been successfully submitted. Our team will review it and get back to you soon."
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Complaint box show
+    function showComplaintBox() {
+      document.getElementById("complaint-section").style.display = "block";
+      document.getElementById("responseMsg").style.display = "none";
+    }
+
+    // Complaint submit
+    function submitComplaint() {
+      let complaint = document.getElementById("complaintText").value.trim();
+      if (complaint === "") {
+        alert("⚠️ Please enter your complaint before submitting.");
+        return;
+      }
+      document.getElementById("responseMsg").style.display = "block";
+      document.getElementById("complaintText").value = "";
+    }
+
+    // Dropdown toggle (click to open)
+    let dropdowns = document.getElementsByClassName("dropbtn");
+    for (let i = 0; i < dropdowns.length; i++) {
+      dropdowns[i].addEventListener("click", function() {
+        this.nextElementSibling.classList.toggle("show");
+      });
+    }
+
+    // Close dropdown if clicked outside
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        let dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+          if (dropdowns[i].classList.contains('show')) {
+            dropdowns[i].classList.remove('show');
+          }
         }
-        setInterval(updateTime, 1000);
-        updateTime(); // Initial call
-    </script>
+      }
+    }
+  </script>
 </body>
 </html>
-
-
-
-

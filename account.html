@@ -1,0 +1,52 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Account</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Your Account</h1>
+  </header>
+
+  <main>
+    <div class="account-box">
+      <img src="student.jpg" alt="User Photo" class="profile-pic">
+      <h2>Welcome, Sweeti</h2>
+      <p><strong>Role:</strong> Student</p>
+      <p><strong>Roll No:</strong> STUDENT001</p>
+      <p><strong>Batch:</strong> CSE 2023-2027</p>
+      <p><strong>Email:</strong> student001@gmail.com</p>
+    </div>
+  </main>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Account</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Your Account</h1>
+  </header>
+
+  <main>
+    <div class="account-box">
+      <img src="student.jpg" alt="User Photo" class="profile-pic">
+      <h2>Welcome, <span th:text="${user.rollNumber}"></span></h2>
+      <p><strong>Role:</strong> <span th:text="${user.role}"></span></p>
+      <p><strong>Roll No:</strong> <span th:text="${user.rollNumber}"></span></p>
+      <p><strong>Batch:</strong> <span th:text="${user.batch}"></span></p>
+      <p><strong>Email:</strong> <span th:text="${user.email}"></span></p>
+    </div>
+  </main>
+</body>
+</html>
